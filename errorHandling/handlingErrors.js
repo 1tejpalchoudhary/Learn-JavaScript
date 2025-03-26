@@ -45,4 +45,6 @@ class MyCustomError extends Error {
     throw new MyCustomError("This is a custom error.");
   } catch (error) {
     console.error("An error occurred: " + error.message);
+  } finally{
+    console.log(" this finally block always run weather error occur or not");
   }
