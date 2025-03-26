@@ -6,6 +6,8 @@ let person ={
     email: "abc@email.com"
 };
 console.log(person);
+
+
 //Object constructor 
 
 person = new Object();
