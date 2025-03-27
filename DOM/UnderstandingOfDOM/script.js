@@ -83,3 +83,32 @@ dropZone.addEventListener("drop", function (event) {
     const draggedElement = document.getElementById(data);
     dropZone.appendChild(draggedElement); // Move item into drop zone
 });
+
+// here we are making a simple counter functionality
+const counterDisplay = document.getElementById("counterDisplay");
+const increaseBtn = document.getElementById("increaseBtn");
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+let count = 0;
+
+// Update counter display
+function updateCounter() {
+    counterDisplay.textContent = count;
+}
+
+// Event listeners
+increaseBtn.addEventListener("click", function () {
+    count++;
+    updateCounter();
+});
+
+decreaseBtn.addEventListener("click", function () {
+    if (count > 0) count--;
+    updateCounter();
+});
+
+resetBtn.addEventListener("click", function () {
+    count = 0;
+    updateCounter();
+});
