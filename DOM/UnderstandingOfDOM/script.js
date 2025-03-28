@@ -112,3 +112,29 @@ resetBtn.addEventListener("click", function () {
     count = 0;
     updateCounter();
 });
+
+
+const inputElement = document.getElementById("myInput");
+
+  inputElement.addEventListener("focus", function(event) {
+  //when we click on input field
+    inputElement.style.backgroundColor = "lightblue";
+  });
+
+  inputElement.addEventListener("blur", function(event) {
+    // Code to execute when the input loses focus
+    inputElement.style.backgroundColor = "white";
+  });
+
+
+
+  const container = document.getElementById("container");
+  const messageElement = document.getElementById("message");
+
+  container.addEventListener("focusin", function(event) {
+    messageElement.textContent = `Element with id ${event.target.id} is in focus.`;
+  });
+
+  container.addEventListener("focusout", function(event) {
+    messageElement.textContent = `Element with id ${event.target.id} is out of focus.`;
+  });
